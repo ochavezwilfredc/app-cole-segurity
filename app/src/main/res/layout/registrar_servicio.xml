@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/contenedorDatos"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/btnRegistrarHijo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar Hijo"
+            />
+        <TextView
+            android:id="@+id/txttitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registro de Servicio"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="12dp"
+            android:textSize="@dimen/sizeTitulo"
+            />
+
+        <TextView
+            android:id="@+id/txtsubtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registrar_rellene"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/textBLack"
+            android:layout_marginTop="4dp"
+            android:textSize="@dimen/sizeRegistrar"
+            />
+
+        <TextView
+            android:layout_margin="5dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="DATOS DEL HIJO"
+            android:textColor="@color/textBLack"
+            android:gravity="center"
+            ></TextView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/sp_hijos"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightSpinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="0dp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+              />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="TURNO"
+                android:textColor="@color/textBLack"
+                android:gravity="center"
+                ></TextView>
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/sp_turno"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightSpinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:padding="0dp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                app:dropDownListPaddingBottom="0dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="GRADO"
+                android:textColor="@color/textBLack"
+                android:gravity="center"
+                ></TextView>
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/sp_grado"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightSpinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:padding="0dp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                app:dropDownListPaddingBottom="0dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="SECCIÓN"
+                android:textColor="@color/textBLack"
+                android:gravity="center"
+                ></TextView>
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/sp_seccion"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightSpinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:padding="0dp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                app:dropDownListPaddingBottom="0dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="COLEGIO"
+            android:textColor="@color/textBLack"
+            android:gravity="center"
+            ></TextView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/sp_colegio"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightSpinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="0dp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                app:dropDownListPaddingBottom="0dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="EMPRESA"
+            android:textColor="@color/textBLack"
+            android:gravity="center"
+            ></TextView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/sp_empresa"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightSpinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="0dp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                app:dropDownListPaddingBottom="0dp"
+                />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_fecha_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+
+            >
+
+            <EditText
+                android:id="@+id/fecha_inicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Fecha Inicio"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_fecha_fin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+
+            >
+
+            <EditText
+                android:id="@+id/fecha_fin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Fecha Fin"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_hora_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+
+            >
+
+            <EditText
+                android:id="@+id/hora_inicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Hora Entrada"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_hora_fin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+
+            >
+
+            <EditText
+                android:id="@+id/hora_fin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Hora Salida"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+
+            android:layout_gravity="center"
+            >
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnLogin"
+                style="@style/btnNoBorder"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="CANCELAR"
+                android:textSize="@dimen/sizeBtnLogin"
+                android:textColor="@color/textBLack"
+                android:background="@drawable/btn_cornercancelar"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="8dp"
+                />
+
+            <Button
+                android:id="@+id/btnRegistrar"
+                style="@style/btnNoBorder"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_registrar"
+                android:textSize="@dimen/sizeBtnLogin"
+                android:textColor="@color/textWhite"
+                android:background="@drawable/btn_cornerlogin"
+                android:layout_gravity="center_horizontal"
+
+                />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</ScrollView>

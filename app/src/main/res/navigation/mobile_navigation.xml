@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.stev.apoderado.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_empresas"
+        android:name="com.stev.apoderado.ui.EmpresaFragment"
+        android:label="@string/menu_empresas"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_servicio_registrar"
+        android:name="com.stev.apoderado.ui.ServicioRegistrarFragment"
+        android:label="@string/menu_servicio_registrar"
+        tools:layout="@layout/registrar_servicio" />
+    <fragment
+        android:id="@+id/nav_hijo"
+        android:name="com.stev.apoderado.ui.HijoFragment"
+        android:label="@string/menu_hijo"
+        tools:layout="@layout/registrar_apoderado" />
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.stev.apoderado.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.stev.apoderado.ui.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.stev.apoderado.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.stev.apoderado.ui.HijoFragment"
+        android:label="@string/menu_hijo"
+        tools:layout="@layout/fragment_send" />
+</navigation>

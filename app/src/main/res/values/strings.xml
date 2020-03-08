@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Apoderado</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_empresas">Empresas</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_hijo">Hijo</string>
+    <string name="menu_servicio_registrar">Registrar Servicio</string>
+
+    <string name="menu_logout">Salir</string>
+    <string name="registrar_titulo">Registro de Usuario</string>
+    <string name="registrar_rellene">Complete los siguientes campos.</string>
+    <string name="registrar_login">Ya Estoy registrado</string>
+
+    <string name="login_rellene">Ingrese su correo electrónico y contraseña.</string>
+    <string name="hint_dni">DNI</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_direccion">Dirección</string>
+
+    <string name="hint_telefono">Celular</string>
+    <string name="hint_password">Contraseña</string>
+
+    <string name="hint_referencia">Referencia</string>
+
+    <string name="hint_apellidopaterno">Nombre Completo</string>
+    <string name="hint_correo">Correo electrónico</string>
+    <string name="hint_fechanacimiento">Fecha Nacimiento</string>
+
+    <string name="btn_registrar">Registrar</string>
+
+
+</resources>
