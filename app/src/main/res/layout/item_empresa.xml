@@ -73,12 +73,14 @@
                 <TextView
                     android:id="@+id/direccion"
                     android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:textSize="17sp"
                     android:text=":"
+                    android:gravity="left"
+                    android:layout_height="fill_parent"
+                    android:layout_width="wrap_content"
+                    android:maxLines="4"
+                    android:lines="4"
                     android:textColor="@color/textBLack"
-                    android:layout_gravity="left"
                     ></TextView>
             </TableRow>
             <TableRow

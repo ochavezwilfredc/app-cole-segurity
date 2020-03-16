@@ -4,7 +4,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.SystemClock
-import android.provider.Settings.Global.putString
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -15,7 +14,6 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.stev.apoderado.RegistrarActivity
 import com.stev.apoderado.Clases.VAR
 import com.stev.apoderado.Clases.Validar
 import es.dmoral.toasty.Toasty

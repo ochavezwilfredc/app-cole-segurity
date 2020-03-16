@@ -14,7 +14,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
-import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
@@ -219,7 +218,6 @@ class ServicioRegistrarFragment : Fragment() {
                 }
 
                 if(valido){
-
                     val params = JSONObject()
                     params.put("turno", datasetTurno.get(comboTurno!!.selectedIndex))
                     params.put("grado", datasetGrado.get(comboGrado!!.selectedIndex))
@@ -231,8 +229,6 @@ class ServicioRegistrarFragment : Fragment() {
                     params.put("empresa_id",  listaEmpresa.get(comboEmpresa!!.selectedIndex).id)
                     params.put("fecha_inicio", fechaInicio)
                     params.put("fecha_fin", fechaFin)
-
-
                     registrar(params)
                 }
             }
@@ -421,7 +417,7 @@ class ServicioRegistrarFragment : Fragment() {
         btnRegistrar?.isEnabled = false
 
         val request : JsonObjectRequest = object : JsonObjectRequest(
-            Request.Method.POST, VAR.url("alumno_reference"), params,
+            Method.POST, VAR.url("alumno_reference"), params,
             Response.Listener { response ->
                 if(response!=null){
                     val msg = response.getString("mensaje")
@@ -457,5 +453,6 @@ class ServicioRegistrarFragment : Fragment() {
         }
         val requestQueue = Volley.newRequestQueue(requireActivity())
         requestQueue.add(request)
+
     }
 }

@@ -6,8 +6,8 @@ import android.app.TimePickerDialog
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.edit
@@ -17,6 +17,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.*
 import com.google.android.material.navigation.NavigationView
 import com.stev.apoderado.Clases.VAR
+import org.json.JSONObject
 import java.util.*
 
 
@@ -24,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     var sharedPref: SharedPreferences? = null
+    var txtNombre:TextView? = null
+    var txtDNI:TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +39,11 @@ class MainActivity : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
+        val headerView = navView.getHeaderView(0)
+        txtNombre = headerView.findViewById(R.id.nombre)
+        txtDNI = headerView.findViewById(R.id.dni)
 
+        actualizarDatos()
         val navController = findNavController(R.id.nav_host_fragment)
 
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
@@ -56,8 +63,8 @@ class MainActivity : AppCompatActivity() {
         }
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_empresas,R.id.nav_servicio_registrar,  R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_logout
+                R.id.nav_home, R.id.nav_empresas,R.id.nav_servicio_registrar,  R.id.nav_servicio_aceptacion,
+                R.id.nav_perfil, R.id.nav_logout
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -144,6 +151,17 @@ class MainActivity : AppCompatActivity() {
                 fragment.listener = listener
                 return fragment
             }
+        }
+    }
+
+
+    fun actualizarDatos(){
+        val d = sharedPref?.getString(VAR.PREF_DATA_USUARIO, "")
+        if (d!=""){
+            val datos = JSONObject(d)
+            txtNombre?.text = datos.getString("persona")
+            txtDNI?.text = datos.getString("documento_identidad")
+
         }
     }
 

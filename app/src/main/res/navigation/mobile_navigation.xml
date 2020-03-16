@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.stev.apoderado.ui.home.HomeFragment"
+        android:name="com.stev.apoderado.ui.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
@@ -15,7 +15,7 @@
         android:id="@+id/nav_empresas"
         android:name="com.stev.apoderado.ui.EmpresaFragment"
         android:label="@string/menu_empresas"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/empresas_list" />
 
     <fragment
         android:id="@+id/nav_servicio_registrar"
@@ -28,22 +28,32 @@
         android:label="@string/menu_hijo"
         tools:layout="@layout/registrar_apoderado" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.stev.apoderado.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_servicio_aceptacion"
+        android:name="com.stev.apoderado.ui.ServicioAceptacionFragment"
+        android:label="@string/menu_servicio_aceptacion"
+        tools:layout="@layout/servicio_aceptacion" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.stev.apoderado.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
-
+        android:id="@+id/nav_ruta"
+        android:name="com.stev.apoderado.ui.ServicioRutaFragment"
+        android:label="@string/menu_ruta"
+        />
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.stev.apoderado.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        android:id="@+id/nav_calificacion"
+        android:name="com.stev.apoderado.ui.CalificacionFragment"
+        android:label="@string/menu_calificacion"
+        />
+    <fragment
+        android:id="@+id/nav_servicio_historial"
+        android:name="com.stev.apoderado.ui.ServicioHistorialFragment"
+        android:label="@string/menu_historial"
+        />
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.stev.apoderado.ui.PerfilFragment"
+        android:label="@string/menu_perfil"
+        />
+
 
 
     <fragment

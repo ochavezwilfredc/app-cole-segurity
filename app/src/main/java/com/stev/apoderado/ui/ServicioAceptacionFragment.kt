@@ -6,7 +6,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
+import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,19 +16,22 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.stev.apoderado.Adapters.EmpresasListAdapter
-import com.stev.apoderado.Clases.ClsEmpresa
+import com.stev.apoderado.Adapters.ServicioAceptacionListAdapter
+import com.stev.apoderado.Clases.ClsServicioAceptacion
 import com.stev.apoderado.Clases.VAR
 import com.stev.apoderado.R
 import es.dmoral.toasty.Toasty
+import org.json.JSONObject
 import java.util.*
 
-class EmpresaFragment : Fragment() {
-    var sharedPref: SharedPreferences? = null
+class ServicioAceptacionFragment : Fragment() {
 
-    var listaEmpresa : LinkedList<ClsEmpresa> = LinkedList()
+
+    var sharedPref: SharedPreferences? = null
+    var listaServicios : LinkedList<ClsServicioAceptacion> = LinkedList()
     var swipeRefreshLayout: SwipeRefreshLayout? = null
-    var adaptador :EmpresasListAdapter ? = null
+    var adaptador : ServicioAceptacionListAdapter? = null
+    var idapoderado:Int = -1
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,56 +39,67 @@ class EmpresaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+
+
         sharedPref = activity?.getSharedPreferences(
             VAR.PREF_NAME,
             VAR.PRIVATE_MODE)
 
-        val root = inflater.inflate(R.layout.empresas_list, container, false)
+        val root = inflater.inflate(R.layout.servicio_aceptacion, container, false)
+        idapoderado = sharedPref?.getString(VAR.PREF_ID_USUARIO, "0")!!.toInt()
 
         val recyclerView: RecyclerView = root.findViewById(R.id.recyclerView)
         swipeRefreshLayout = root?.findViewById(R.id.swipeRefreshLayout)
         swipeRefreshLayout?.setOnRefreshListener {
-            buscarEmpresas()
+            buscarServicios()
         }
-        adaptador = EmpresasListAdapter(requireActivity(), listaEmpresa)
+
+
+        adaptador = ServicioAceptacionListAdapter(requireActivity(), listaServicios)
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = adaptador
         }
-        buscarEmpresas()
+        buscarServicios()
 
         return root
     }
 
-    fun buscarEmpresas(){
+    fun buscarServicios(){
+        sharedPref?.edit {
+            putBoolean("ruta", false)
+        }
         if(!swipeRefreshLayout!!.isRefreshing) swipeRefreshLayout?.isRefreshing = true
+
+        val params = JSONObject()
+        params.put("apoderado_id", idapoderado)
         val request : JsonObjectRequest = object : JsonObjectRequest(
-            Method.GET, VAR.url("empresas_list"), null,
+            Method.POST, VAR.url("servicio_aceptacion"), params,
             Response.Listener { response ->
                 if(response!=null){
                     val estado = response.getInt("estado")
                     val mensaje = response.getString("mensaje")
                     if(estado == 200){
                         // loadingDialog?.dismiss()
-                        val empresa = response.getJSONArray("datos")
-                        listaEmpresa.clear()
-                        for (i in 0 until empresa.length()) {
-                            val empresaJson = empresa.getJSONObject(i)
-                            val emp = ClsEmpresa( empresaJson.getInt("id"),
-                                empresaJson.getString("nombre_completo"),
-                                empresaJson.getString("documento_identidad"),
-                                empresaJson.getString("direccion"),
-                                empresaJson.getString("celular"),
-                                empresaJson.getDouble("valor"),
-                                empresaJson.getDouble("porcentaje")
-
+                        val datos = response.getJSONArray("datos")
+                        listaServicios.clear()
+                        for (i in 0 until datos.length()) {
+                            val json = datos.getJSONObject(i)
+                            val serv = ClsServicioAceptacion( json.getInt("servicio_detalle_id"),
+                                json.getString("alumno"),
+                                json.getString("empresa"),
+                                json.getString("colegio"),
+                                json.getString("hora_entrada"),
+                                json.getString("hora_salida"),
+                                json.getString("solicitud"),
+                                json.getString("vigencia")
                             )
-                            listaEmpresa.add(emp)
+                            listaServicios.add(serv)
 
                         }
 
-                        listaEmpresa.sortByDescending {
-                            it.porcentaje
+                        listaServicios.sortBy {
+                            it.id
                         }
 
                         adaptador?.notifyDataSetChanged()
@@ -121,8 +137,5 @@ class EmpresaFragment : Fragment() {
 
         val requestQueue =  Volley.newRequestQueue(requireActivity())
         requestQueue?.add(request)
-
-
-
     }
 }

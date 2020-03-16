@@ -1,4 +1,4 @@
-package com.stev.apoderado.ui.home
+package com.stev.apoderado.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,7 +19,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-
         return root
     }
 }

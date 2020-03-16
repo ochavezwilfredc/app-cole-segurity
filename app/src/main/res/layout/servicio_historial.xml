@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_fecha_inicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+
+        >
+
+        <EditText
+            android:id="@+id/fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Fecha"
+            android:inputType="date"
+            android:focusable="false"
+            android:clickable="true"
+            android:singleLine="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:id="@+id/contenedor"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_margin="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="CHOFER:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+
+                <TextView
+                    android:id="@+id/chofer"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text=":"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="5dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="PLACA:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+
+                <TextView
+                    android:id="@+id/placa"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text=":"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="MARCA:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+
+                <TextView
+                    android:id="@+id/marca"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text=":"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="5dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="LLEGADA:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+
+                <TextView
+                    android:id="@+id/llegada"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="VALO:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="5dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="SALIDA:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+
+                <TextView
+                    android:id="@+id/salida"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="VALO:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+            </TableRow>
+        </TableLayout>
+
+
+        <fragment
+            android:id="@+id/frg"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

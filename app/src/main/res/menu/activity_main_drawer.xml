@@ -17,17 +17,13 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_servicio_registrar" />
         <item
-            android:id="@+id/nav_hijo"
+            android:id="@+id/nav_servicio_aceptacion"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_hijo" />
+            android:title="@string/menu_servicio_aceptacion" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_perfil"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
-        <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:title="@string/menu_perfil" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/logout"

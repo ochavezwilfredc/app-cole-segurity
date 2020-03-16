@@ -1,8 +1,5 @@
 package com.stev.apoderado.Clases
 
-import android.app.Activity
-import android.content.Context
-import android.util.Log
 import android.util.Patterns
 import android.widget.EditText
 
@@ -44,11 +41,14 @@ class Validar {
 
 class VAR {
     companion object {
-        val url: String = "http://192.168.18.172/route_ahp/route_ahp_api/webservice/"
+        val url: String = "http://192.168.1.104/route_ahp/route_ahp_api/webservice/"
         var ext: String = ".php"
+
+
         fun url(m: String): String {
-            return url + m + ext
+            return url+ m + ext
         }
+
         val PRIVATE_MODE = 0
         val PREF_NAME = "apoderado-app"
         val PREF_TOKEN  = "token"

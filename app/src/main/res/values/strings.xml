@@ -1,4 +1,5 @@
 <resources>
+    <string name="api_google">AIzaSyC4x7Q85elwIfzkxsU2yLK6NfhQ_QicJ_w</string>
     <string name="app_name">Apoderado</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -14,6 +15,11 @@
     <string name="menu_share">Share</string>
     <string name="menu_hijo">Hijo</string>
     <string name="menu_servicio_registrar">Registrar Servicio</string>
+    <string name="menu_servicio_aceptacion">Servicio Aceptación</string>
+    <string name="menu_ruta">Ruta</string>
+    <string name="menu_calificacion">Calificación</string>
+    <string name="menu_historial">Historial</string>
+    <string name="menu_perfil">Perfil</string>
 
     <string name="menu_logout">Salir</string>
     <string name="registrar_titulo">Registro de Usuario</string>

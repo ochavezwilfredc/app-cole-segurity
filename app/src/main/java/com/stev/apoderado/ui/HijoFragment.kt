@@ -40,6 +40,8 @@ class HijoFragment : Fragment() {
             VAR.PREF_NAME,
             VAR.PRIVATE_MODE)
 
+        val txtTitulo :TextView = root.findViewById(R.id.txttitulo)
+        txtTitulo.text = "Registro de Hijo"
 
         val datos = sharedPref?.getString(VAR.PREF_DATA_USUARIO, "")
         btnRegistrar = root.findViewById(R.id.btnRegistrar)
