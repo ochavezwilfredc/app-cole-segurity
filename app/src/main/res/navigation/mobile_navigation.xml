@@ -7,50 +7,74 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.stev.apoderado.ui.HomeFragment"
+        android:name="com.app.movilidad.ui.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_empresas"
-        android:name="com.stev.apoderado.ui.EmpresaFragment"
+        android:name="com.app.movilidad.ui.EmpresaFragment"
         android:label="@string/menu_empresas"
-        tools:layout="@layout/empresas_list" />
+        />
 
     <fragment
         android:id="@+id/nav_servicio_registrar"
-        android:name="com.stev.apoderado.ui.ServicioRegistrarFragment"
+        android:name="com.app.movilidad.ui.ServicioRegistrarFragment"
         android:label="@string/menu_servicio_registrar"
-        tools:layout="@layout/registrar_servicio" />
+   />
     <fragment
         android:id="@+id/nav_hijo"
-        android:name="com.stev.apoderado.ui.HijoFragment"
+        android:name="com.app.movilidad.ui.HijoFragment"
         android:label="@string/menu_hijo"
-        tools:layout="@layout/registrar_apoderado" />
+        />
     <fragment
         android:id="@+id/nav_servicio_aceptacion"
-        android:name="com.stev.apoderado.ui.ServicioAceptacionFragment"
+        android:name="com.app.movilidad.ui.ServicioAceptacionFragment"
         android:label="@string/menu_servicio_aceptacion"
-        tools:layout="@layout/servicio_aceptacion" />
+        />
 
     <fragment
         android:id="@+id/nav_ruta"
-        android:name="com.stev.apoderado.ui.ServicioRutaFragment"
+        android:name="com.app.movilidad.ui.ServicioRutaFragment"
         android:label="@string/menu_ruta"
         />
     <fragment
         android:id="@+id/nav_calificacion"
-        android:name="com.stev.apoderado.ui.CalificacionFragment"
+        android:name="com.app.movilidad.ui.CalificacionFragment"
         android:label="@string/menu_calificacion"
         />
     <fragment
         android:id="@+id/nav_servicio_historial"
-        android:name="com.stev.apoderado.ui.ServicioHistorialFragment"
+        android:name="com.app.movilidad.ui.ServicioHistorialFragment"
         android:label="@string/menu_historial"
         />
     <fragment
+        android:id="@+id/nav_vehiculos"
+        android:name="com.app.movilidad.ui.VehiculosFragment"
+        android:label="@string/menu_vehiculos"
+        />
+    <fragment
+        android:id="@+id/nav_servicios_chofer"
+        android:name="com.app.movilidad.ui.ServiciosChoferFragment"
+        android:label="@string/menu_servicios_chofer"
+        />
+
+
+    <fragment
+        android:id="@+id/nav_servicios_ruta_hoy"
+        android:name="com.app.movilidad.ui.ServiciosRutasHoyFragment"
+        android:label="@string/menu_servicios_rutas_hoy"
+        />
+    <fragment
+        android:id="@+id/nav_servicios_ruta_historial"
+        android:name="com.app.movilidad.ui.ServiciosRutaHistorialFragment"
+        android:label="@string/menu_servicios_rutas_historial"
+        />
+
+
+    <fragment
         android:id="@+id/nav_perfil"
-        android:name="com.stev.apoderado.ui.PerfilFragment"
+        android:name="com.app.movilidad.ui.PerfilFragment"
         android:label="@string/menu_perfil"
         />
 
@@ -58,7 +82,6 @@
 
     <fragment
         android:id="@+id/nav_logout"
-        android:name="com.stev.apoderado.ui.HijoFragment"
-        android:label="@string/menu_hijo"
-        tools:layout="@layout/fragment_send" />
+        android:name="com.app.movilidad.ui.HijoFragment"
+        android:label="@string/menu_hijo" />
 </navigation>

@@ -2,34 +2,53 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="@string/menu_home" />
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+
+    <group android:id="@+id/grupoApoderado" android:checkableBehavior="none">
         <item
             android:id="@+id/nav_empresas"
+            android:visible="false"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_empresas" />
         <item
             android:id="@+id/nav_servicio_registrar"
             android:icon="@drawable/ic_menu_slideshow"
+            android:visible="false"
             android:title="@string/menu_servicio_registrar" />
         <item
             android:id="@+id/nav_servicio_aceptacion"
             android:icon="@drawable/ic_menu_slideshow"
+            android:visible="false"
+
             android:title="@string/menu_servicio_aceptacion" />
-        <item
-            android:id="@+id/nav_perfil"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_perfil" />
-        <item
-            android:id="@+id/nav_logout"
-            android:icon="@drawable/logout"
-            android:title="@string/menu_logout"/>
+
     </group>
 
+    <group android:id="@+id/grupoChofer" android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_vehiculos"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_vehiculos" />
 
+        <item
+            android:id="@+id/nav_servicios_chofer"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_servicios_chofer" />
+    </group>
+    <item
+
+        android:id="@+id/nav_perfil"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="@string/menu_perfil" />
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/logout"
+        android:title="@string/menu_logout"/>
 
 </menu>

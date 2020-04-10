@@ -21,7 +21,7 @@
             android:id="@+id/titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             android:text="PROGRESO"
             android:textColor="@color/colorAccent"
@@ -32,30 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:text="DOCUMENTO:"
-                    android:textColor="@color/textBLack"
-                    android:layout_gravity="left"
-                    ></TextView>
 
-                <TextView
-                    android:id="@+id/documento"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:text=":"
-                    android:textColor="@color/textBLack"
-                    android:layout_gravity="left"
-                    ></TextView>
-            </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
@@ -65,15 +42,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:text="DIRECCIÓN:"
+                    android:text="MARCA:"
                     android:textColor="@color/textBLack"
-                    android:textSize="15sp"
+                    android:textSize="17sp"
                     android:textStyle="bold"></TextView>
 
                 <TextView
-                    android:id="@+id/direccion"
+                    android:id="@+id/marca"
                     android:layout_marginLeft="10dp"
-                    android:textSize="15sp"
+                    android:textSize="17sp"
                     android:text=":"
                     android:gravity="left"
                     android:layout_height="fill_parent"
@@ -83,6 +60,7 @@
                     android:textColor="@color/textBLack"
                     ></TextView>
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
@@ -91,18 +69,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:text="TELÉFONO:"
+                    android:text="COLOR:"
                     android:textColor="@color/textBLack"
-                    android:textSize="15sp"
+                    android:textSize="17sp"
                     android:textStyle="bold"></TextView>
 
                 <TextView
-                    android:id="@+id/telefono"
+                    android:id="@+id/color"
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:text="IMC:"
+                    android:textSize="17sp"
+                    android:text=""
                     android:textColor="@color/textBLack"
                     android:layout_gravity="left"
                     ></TextView>
@@ -113,20 +91,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
+                    android:textSize="17sp"
                     android:textStyle="bold"
-                    android:text="VALOR:"
+                    android:text="INICIO:"
                     android:textColor="@color/textBLack"
                     android:layout_gravity="left"
                     ></TextView>
 
                 <TextView
-                    android:id="@+id/valor"
+                    android:id="@+id/inicio"
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:text="VALO:"
+                    android:textSize="17sp"
+                    android:text=""
                     android:textColor="@color/textBLack"
                     android:layout_gravity="left"
                     ></TextView>
@@ -137,36 +115,50 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
+                    android:textSize="17sp"
                     android:textStyle="bold"
-                    android:text="CALIDAD:"
+                    android:text="FIN:"
                     android:textColor="@color/textBLack"
                     android:layout_gravity="left"
                     ></TextView>
 
-
-                <ProgressBar
-                    android:layout_gravity="center"
-                    android:scaleY="2"
-                    android:id="@+id/progressBar"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:minWidth="70dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-
-
                 <TextView
-                    android:layout_marginLeft="5dp"
-                    android:id="@+id/porcacalidad"
+                    android:id="@+id/fin"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:text="VALO:"
+                    android:textSize="17sp"
+                    android:text=""
                     android:textColor="@color/textBLack"
                     android:layout_gravity="left"
                     ></TextView>
             </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:text="ESTADO:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+
+                <TextView
+                    android:id="@+id/estado"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:text=""
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+            </TableRow>
+
         </TableLayout>
     </LinearLayout>
 </LinearLayout>

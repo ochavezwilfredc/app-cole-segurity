@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <LinearLayout
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:gravity="center"
+                android:width="200dp"
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="SERVICIO"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center"
+                />
+
+            <ImageView
+                android:id="@+id/btnMapa"
+                android:layout_marginLeft="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/mapa"
+                android:padding="5dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="ALUMNO"
+                    android:textColor="@color/textBLack"
+                    android:textSize="17sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/alumno"
+                    android:textSize="17sp"
+                    android:text="nombre"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/textBLack"
+                    ></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="DIRECCIÓN ALUMNO"
+                    android:textColor="@color/textBLack"
+                    android:textSize="17sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/direccion_alumno"
+                    android:textSize="17sp"
+                    android:text="direccion alumno"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/textBLack"
+                    ></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="DIRECCIÓN COLEGIO"
+                    android:textColor="@color/textBLack"
+                    android:textSize="17sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/direccion_colegio"
+                    android:textSize="17sp"
+                    android:text="direccion colegio"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/textBLack"
+                    ></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:text="ENTRADA:"
+                    android:textColor="@color/textBLack"
+                    android:textSize="17sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/entrada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Entrada"
+                    android:textColor="@color/textBLack"
+                    android:textSize="17sp"></TextView>
+
+                <CheckBox
+                    android:id="@+id/cbentrada"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Llegó"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:text="SALIDA:"
+                    android:textColor="@color/textBLack"
+                    android:textSize="17sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/salida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Entrada"
+                    android:textColor="@color/textBLack"
+                    android:textSize="17sp"></TextView>
+
+                <CheckBox
+                    android:id="@+id/cbsalida"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Salió"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contenedorObservacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:text="OBSER.:"
+                    android:textColor="@color/textBLack"
+                    android:textSize="17sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/observacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="OBSERVACIÓN"
+                    android:textColor="@color/textBLack"
+                    android:textSize="17sp"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+
+                    android:id="@+id/btnObservacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AGREGAR OBSERVACIÓN"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
