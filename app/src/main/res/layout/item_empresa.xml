@@ -32,105 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:text="DOCUMENTO:"
-                    android:textColor="@color/textBLack"
-                    android:layout_gravity="left"
-                    ></TextView>
 
-                <TextView
-                    android:id="@+id/documento"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:text=":"
-                    android:textColor="@color/textBLack"
-                    android:layout_gravity="left"
-                    ></TextView>
-            </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="DIRECCIÓN:"
-                    android:textColor="@color/textBLack"
-                    android:textSize="15sp"
-                    android:textStyle="bold"></TextView>
-
-                <TextView
-                    android:id="@+id/direccion"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="15sp"
-                    android:text=":"
-                    android:gravity="left"
-                    android:layout_height="fill_parent"
-                    android:layout_width="wrap_content"
-                    android:maxLines="4"
-                    android:lines="4"
-                    android:textColor="@color/textBLack"
-                    ></TextView>
-            </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="TELÉFONO:"
-                    android:textColor="@color/textBLack"
-                    android:textSize="15sp"
-                    android:textStyle="bold"></TextView>
-
-                <TextView
-                    android:id="@+id/telefono"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:text="IMC:"
-                    android:textColor="@color/textBLack"
-                    android:layout_gravity="left"
-                    ></TextView>
-            </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:text="VALOR:"
-                    android:textColor="@color/textBLack"
-                    android:layout_gravity="left"
-                    ></TextView>
-
-                <TextView
-                    android:id="@+id/valor"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:text="VALO:"
-                    android:textColor="@color/textBLack"
-                    android:layout_gravity="left"
-                    ></TextView>
-            </TableRow>
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
@@ -148,24 +51,289 @@
                 <ProgressBar
                     android:layout_gravity="center"
                     android:scaleY="2"
-                    android:id="@+id/progressBar"
+                    android:id="@+id/pbCalidad"
                     style="?android:attr/progressBarStyleHorizontal"
-                    android:minWidth="70dp"
+                    android:minWidth="110dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
 
-
                 <TextView
+                    android:id="@+id/porcCalidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
                     android:layout_marginLeft="5dp"
-                    android:id="@+id/porcacalidad"
+                    android:text="VALO:"
+                    android:textColor="#03274B"
+                    android:textSize="15sp"></TextView>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
-                    android:text="VALO:"
+                    android:textStyle="bold"
+                    android:text="PRECIO:"
                     android:textColor="@color/textBLack"
                     android:layout_gravity="left"
                     ></TextView>
+
+
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:scaleY="2"
+                    android:id="@+id/pbPrecio"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:minWidth="110dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/porcPrecio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="VALO:"
+                    android:textColor="#03274B"
+                    android:textSize="15sp"></TextView>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="PUNTUALIDAD:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+
+
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:scaleY="2"
+                    android:id="@+id/pbPuntualidad"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:minWidth="110dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/porcPuntualidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="VALO:"
+                    android:textColor="#03274B"
+                    android:textSize="15sp"></TextView>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="ANTIGUEDAD:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+
+
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:scaleY="2"
+                    android:id="@+id/pbAntiguedad"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:minWidth="110dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/porcAntiguedad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="VALO:"
+                    android:textColor="#03274B"
+                    android:textSize="15sp"></TextView>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="VALOR:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    ></TextView>
+
+
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:scaleY="2"
+                    android:id="@+id/pbValor"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:minWidth="110dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/porcValor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="VALO:"
+                    android:textColor="#03274B"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="CEDULA\nAUTORIZACIÓN:"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    android:minLines="2"
+                    />
+
+                <CheckBox
+                    android:id="@+id/cbCedula"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    android:gravity="center"
+                    android:enabled="false"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="TARJETA UNICA\nCIRCULACIÓN"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="10dp"
+                    />
+
+
+                <ProgressBar
+                    android:layout_marginLeft="-10dp"
+                    android:layout_gravity="center"
+                    android:scaleY="2"
+                    android:id="@+id/pbTarjeta"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:minWidth="110dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/porcTarjeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="5dp"
+                    android:text="VALO:"
+                    android:textColor="#03274B"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="CREDENCIAL\nCONDUCTOR"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    />
+
+
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:scaleY="2"
+                    android:id="@+id/pbCredencial"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:minWidth="110dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/porcCredencial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="5dp"
+                    android:text="VALO:"
+                    android:textColor="#03274B"
+                    android:textSize="15sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="BREVETE\nCONDUCTOR"
+                    android:textColor="@color/textBLack"
+                    android:layout_gravity="left"
+                    />
+
+
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:scaleY="2"
+                    android:id="@+id/pbBrevete"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:minWidth="110dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/porcBrevete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="5dp"
+                    android:text="VALO:"
+                    android:textColor="#03274B"
+                    android:textSize="15sp" />
             </TableRow>
         </TableLayout>
     </LinearLayout>

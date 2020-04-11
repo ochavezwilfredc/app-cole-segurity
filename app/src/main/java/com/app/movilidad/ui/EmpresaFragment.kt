@@ -15,7 +15,7 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.app.movilidad.Adapters.EmpresasListAdapter
-import com.app.movilidad.Clases.ClsEmpresa
+import com.app.movilidad.Clases.ClsEmpresaReporte
 import com.app.movilidad.Clases.VAR
 import com.app.movilidad.R
 import es.dmoral.toasty.Toasty
@@ -24,7 +24,7 @@ import java.util.*
 class EmpresaFragment : Fragment() {
     var sharedPref: SharedPreferences? = null
 
-    var listaEmpresa : LinkedList<ClsEmpresa> = LinkedList()
+    var listaEmpresa : LinkedList<ClsEmpresaReporte> = LinkedList()
     var swipeRefreshLayout: SwipeRefreshLayout? = null
     var adaptador :EmpresasListAdapter ? = null
 
@@ -58,7 +58,7 @@ class EmpresaFragment : Fragment() {
     fun buscarEmpresas(){
         if(!swipeRefreshLayout!!.isRefreshing) swipeRefreshLayout?.isRefreshing = true
         val request : JsonObjectRequest = object : JsonObjectRequest(
-            Method.GET, VAR.url("empresas_list"), null,
+            Method.GET, VAR.url("reporte_empresas_priorizadas"), null,
             Response.Listener { response ->
                 if(response!=null){
                     val estado = response.getInt("estado")
@@ -69,21 +69,24 @@ class EmpresaFragment : Fragment() {
                         listaEmpresa.clear()
                         for (i in 0 until empresa.length()) {
                             val empresaJson = empresa.getJSONObject(i)
-                            val emp = ClsEmpresa( empresaJson.getInt("id"),
+                            val emp = ClsEmpresaReporte( empresaJson.getInt("id"),
                                 empresaJson.getString("nombre_completo"),
-                                empresaJson.getString("documento_identidad"),
-                                empresaJson.getString("direccion"),
-                                empresaJson.getString("celular"),
-                                empresaJson.getDouble("valor"),
-                                empresaJson.getDouble("porcentaje")
-
-                            )
+                                empresaJson.getDouble("calidad_servicio"),
+                                empresaJson.getDouble("precio"),
+                                empresaJson.getDouble("puntualidad"),
+                                empresaJson.getDouble("antiguedad_vehicular"),
+                                empresaJson.getDouble("valor_empresa"),
+                                empresaJson.getBoolean("cedula_autorizacion"),
+                                empresaJson.getDouble("tarjeta_unica_circulacion"),
+                                empresaJson.getDouble("credencial_conductor"),
+                                empresaJson.getDouble("brevete_conductor")
+                                )
                             listaEmpresa.add(emp)
 
                         }
 
                         listaEmpresa.sortByDescending {
-                            it.porcentaje
+                            it.valor
                         }
 
                         adaptador?.notifyDataSetChanged()
